@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: "Work Sans";
+      src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+    }
+
+    :root {
+      --White: hsl(0, 0%, 100%);
+      --Light-pink: hsl(275, 100%, 97%);
+      --Grayish-purple: hsl(292, 16%, 49%);
+      --Dark-purple: hsl(292, 42%, 14%);
+      --Grayish-purple-op: hsla(292, 16%, 49%, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Work Sans";
+      font-size: 16px;
+      background-color: var(--White);
+      background-image: url(./assets/images/background-pattern-desktop.svg);
+      background-repeat: repeat-x;
+      height: 100vh;
+      display: grid;
+      place-content: center;
+    }
+
+    main {
+      background-color: var(--White);
+      max-width: 500px;
+      max-height: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    div {
+      display: flex;
+      margin: 20px 20px 30px 20px;
+    }
+
+    img {
+      width: 25px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    summary {
+      display: block;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 20px 20px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--Grayish-purple-op);
+    }
+
+    .det {
+      margin: 0 20px 20px 20px;
+      color: var(--Grayish-purple);
+    }
+
+    .last {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    details {
+      margin: 10px;
+    }
+
+    summary::after {
+      content: url(./assets/images/icon-plus.svg);
+    }
+
+    details[open] summary:after {
+      content: url(./assets/images/icon-minus.svg);
+    }
+
+    .hov {
+      color: var(--Dark-purple);
+    }
+
+    .hov:hover {
+      color: rgb(212, 63, 145);
+      cursor: pointer;
+    }
+
+    .attribution {
+      display: none;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media (max-width: 375px) {
+      body {
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        background-repeat: repeat-x;
+      }
+
+      main {
+        margin: 0 20px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div>
+      <img src="./assets/images/icon-star.svg" alt="">
+      <h1>FAQs</h1>
+    </div>
+
+
+    <details>
+      <summary><p class="hov">What is Frontend Mentor, and how will it help me?</p></summary>
+
+      <p class="det">Frontend Mentor offers realistic coding challenges to help developers improve their
+        frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+        all levels and ideal for portfolio building.</p>
+    </details>
+    <details>
+      <summary><p class="hov">Is Frontend Mentor free?</p></summary>
+
+      <p class="det">Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+        option providing access to a range of projects suitable for all skill levels.</p>
+    </details>
+    <details>
+      <summary><p class="hov">Can I use Frontend Mentor projects in my portfolio?</p></summary>
+
+      <p class="det">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+        way to showcase your skills to potential employers!</p>
+    </details>
+    <details>
+      <summary class="last"><p class="hov">How can I get help if I'm stuck on a Frontend Mentor challenge?</p></summary>
+
+      <p class="det">The best place to get help is inside Frontend Mentor's Discord community. There's a help
+        channel where you can ask questions and seek support from other community members.</p>
+    </details>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
